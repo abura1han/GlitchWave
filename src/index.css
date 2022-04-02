@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Remove outline for non-keyboard :focus */
+*:focus-visible {
+  outline: none;
+}
+
+*:focus {
+  outline: 2px solid #F97316;
+}
+
+/* Body */
+body {
+  background-color: #312334;
+}
