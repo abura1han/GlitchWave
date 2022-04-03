@@ -8,7 +8,7 @@ const MobileHeader: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
 
   return (
-    <header className="flex md:hidden items-center justify-between px-2 lg:px-5 py-2 w-full border-b border-b-glitch-box relative">
+    <header className="flex md:hidden items-center justify-between px-4 py-3 w-full border-b border-b-glitch-box relative">
       {/* Toggle mobile popup */}
       {isPopupOpen && <MobileNav />}
 
@@ -37,9 +37,9 @@ const MobileHeader: React.FC = () => {
           <img
             src={configs.userAvatar}
             alt="Abu Raihan"
-            className="w-8 h-8 rounded mr-2 border-none"
+            className="w-8 h-8 rounded border-none"
           />
-          <span className="font-medium hidden sm:block">
+          <span className="font-medium hidden sm:block ml-2 text-white">
             {configs.userName}
           </span>
         </Link>
