@@ -23,7 +23,7 @@ const MobileNav: React.FC = () => {
 
   return (
     <nav
-      className="w-full px-2 absolute top-full left-0 z-30 bg-glitch-bar border-b border-b-glitch-box"
+      className="w-full px-2 absolute top-full left-0 z-30 bg-dark-glitch"
       aria-label="Sidebar navigation"
     >
       {/* Padding for some extra space in the bottom */}
@@ -31,10 +31,7 @@ const MobileNav: React.FC = () => {
         {/* Sidevar menu list */}
         {pageList &&
           pageList.map(({ icon, label, slug }, i) => (
-            <li
-              key={i}
-              className="border-b border-b-glitch-box last:border-none"
-            >
+            <li key={i} className="last:border-none">
               <NavLink
                 to={slug}
                 className={({ isActive }) =>
