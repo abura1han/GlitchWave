@@ -12,9 +12,10 @@ const Search: React.FC = () => {
       <input
         id="search"
         type="search"
+        autoComplete="off"
         className={`w-1 sm:w-full px-2 py-2  text-gray-200 ${
           isFocused
-            ? "w-screen absolute left-0 top-3 bg-glitch-box"
+            ? "w-screen absolute left-0 top-1 bg-glitch-box"
             : "w-full bg-transparent"
         }`}
         placeholder="Search..."
