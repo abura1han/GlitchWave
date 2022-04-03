@@ -28,7 +28,7 @@ const TransactionsProductPreview: React.FC<Props> = ({
         <ProductImage url={image && image} />
         <div className="ml-5 flex-1">
           {/* Procut purchase data, time */}
-          <div className="text-gray-300">
+          <div className="text-gray-300 text-sm">
             {date && date} - {time && time}
           </div>
           {/* Product order id */}
