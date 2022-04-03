@@ -27,7 +27,7 @@ const MobileNav: React.FC = () => {
       aria-label="Sidebar navigation"
     >
       {/* Padding for some extra space in the bottom */}
-      <ul className="py-5">
+      <ul className="py-3">
         {/* Sidevar menu list */}
         {pageList &&
           pageList.map(({ icon, label, slug }, i) => (
@@ -35,7 +35,7 @@ const MobileNav: React.FC = () => {
               <NavLink
                 to={slug}
                 className={({ isActive }) =>
-                  `flex relative items-center px-5 py-4 font-medium ${
+                  `flex relative items-center px-3 py-3 font-medium ${
                     isActive ? "text-glitch-orange" : "text-gray-400"
                   }`
                 }
