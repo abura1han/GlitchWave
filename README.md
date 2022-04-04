@@ -50,6 +50,29 @@ const MyNewPage: React.FC = () => {
 }
 ```
 
+### Work with GlitchWave page content `./src/components/contents/ContentBox.tsx`
+ContentBox component takes react childs and show them in a GlitchWave styled content section 
+### Props
+- `name`: The name of the content section
+- `showSearch`: Show search box to the right top of the content section. Boolean. Default false.
+- `children`: React children
+```js
+
+import ContentBox from "../components/contents/ContentBox.tsx"
+import Button from "../components/Button.tsx"
+
+const MyNewPage: React.FC = () => {
+  return (
+    <PageWrapper>
+      <ContentBox>
+        <h2>Hello world!</h2>
+        <Button>Click me</Button>
+      </ContentBox>
+    </PageWrapper>
+    )
+}
+```
+
 ### Add page link to sidenav.
 GlitchWave provide a context to work with sidenav links `./src/context/PageContext.tsx`
 ```js
@@ -95,40 +118,20 @@ const MyComponent: React.FC = () => {
 }
 ```
 
-### Toggle button
-GlitchWave provide a component to work with Toggle button. `./src/components/ToggleBtn.tsx`. <br />
-It takes three props
-- `btnOnLabel`
-- `btnOffLabel`
-- `btnOnByDefault // Optional, default false `
+### Button
+GlitchWave provide a component to work with GlitchWave styled Button. `./src/components/Button.tsx`. <br />
+Props
+  - `className`: Optional
+  - `children`: React child
 ```js
-import ToggleBtn from "../components/SortByTag.tsx";
+import Button from "../components/Button.tsx";
 
 const MyComponent: React.FC = () => {
   return (
     <div>
-      <ToggleBtn btnOnLabel="On" btnOffLabel="Off" btnOnByDefault={true}  />
-    </div>
-  )
-}
-```
-
-### Collapsible section
-GlitchWave provide a component to work with collapsible section. `./src/components/Collapse.tsx`. <br />
-It takes four props
-- `name: String; // Name of the Collapseable section`
-- `btnLabel: String; // Label of clickable button to collapse`
-- `openByDefault?: boolean; // Optional, default false`
-- `children: React.ReactChild; // After click what content to show`
-```js
-import Collapse from "../components/Collapse.tsx";
-
-const MyComponent: React.FC = () => {
-  return (
-    <div>
-      <Collapse name="My collapse" btnLabel="Toggle" openByDefault={true}>
-        <div>Hello world!</div>
-      </Collapse>
+      <Button className="bg-gray-600 text-white">
+        <span>Click me</span>
+      </Button>
     </div>
   )
 }
