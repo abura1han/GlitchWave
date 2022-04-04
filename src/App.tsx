@@ -15,6 +15,7 @@ import { PageListContext, PageType } from "./contexts/PageContext";
  */
 const App: React.FC = () => {
   // Pagelist context for if any time we need to update form another child components
+  // Also usable for dynamic sidebar menu. If menu comes form server
   const [pageList, setPageList] = useState<PageType[]>([
     { label: "Dashboard", slug: "/", icon: "dashboard" },
     { label: "Customer list", slug: "/customer-list", icon: "people_alt" },
@@ -25,8 +26,8 @@ const App: React.FC = () => {
       icon: "account_balance_wallet",
     },
     { label: "Products", slug: "/products", icon: "shop_2" },
-    // Profile must be the last element of the array
     { label: "Settings", slug: "/settings", icon: "settings" },
+    { label: "Login", slug: "/login", icon: "login" },
   ]);
 
   return (
