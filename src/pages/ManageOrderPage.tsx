@@ -20,6 +20,9 @@ interface OrderedProductType {
   image: string;
 }
 
+/**
+ * Manage order page
+ */
 const ManageOrderPage: React.FC = () => {
   const [orderedProductList, steOrderedProductList] = useState<
     OrderedProductType[]
