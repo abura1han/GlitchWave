@@ -1,5 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 
+// 404 page not found error page
 const NotFoundPage = () => {
   return (
     <PageWrapper>
