@@ -26,6 +26,10 @@ interface OrderedProductType {
   image: string;
 }
 
+/**
+ * Dashboard page
+ * Sows current store status & active products list by category
+ */
 const DashboardPage: React.FC = () => {
   const [orderedProductList, steOrderedProductList] = useState<
     OrderedProductType[]
@@ -58,23 +62,30 @@ const DashboardPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Dashboard status */}
+        {/* Store status */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4 overflow-x-auto mt-10">
+          {/* Toatal saled */}
           <DisplaySection
             displayText="$5333"
             subText="Total Sales"
             icon={TotalSalesIcon}
           />
+
+          {/* Toatal product orders */}
           <DisplaySection
             icon={ShoppingCartIcon}
             displayText={"133"}
             subText={"Product Orders"}
           />
+
+          {/* Store views */}
           <DisplaySection
             icon={StoreIcon}
             displayText={"3344"}
             subText={"Store Views"}
           />
+
+          {/* Product views */}
           <DisplaySection
             icon={LeadershipIcon}
             displayText={"234"}
