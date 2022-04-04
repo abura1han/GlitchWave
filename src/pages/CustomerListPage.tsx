@@ -13,7 +13,7 @@ interface CustomerType {
 const CustomerListPage: React.FC = () => {
   const [customerList, setCustomerList] = useState<CustomerType[]>([]);
 
-  // Fetch ordered products
+  // Fetch all customers and set to customerList
   useEffect(() => {
     fetch(`${configs.proxy}/customers.json`)
       .then((res) => res.json())
@@ -27,6 +27,7 @@ const CustomerListPage: React.FC = () => {
       <ContentBox name="Customer List" showSearch>
         <div className="w-full border-b border-b-glitch-box" />
         <Suspense fallback={<LoadingIndicator />}>
+          {/* Customer list */}
           <ul className="px-5 pb-5">
             {customerList.map(({ name, orderCount }, i) => (
               <li className="block mt-5" key={i}>
