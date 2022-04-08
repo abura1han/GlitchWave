@@ -9,7 +9,7 @@
 ![](https://github.com/abura1han/GlitchWave/blob/main/Lighthouse-performance-score.png)
 
 ## What is GlitchWave?
-GlitchWave is an open-source frontend project. It makes our life easy to work on the admin panel. No more work from scratch. Work with premaid admin panel. Easy to customize, add, remove features.
+GlitchWave is an open-source frontend project. It makes our life easy to work on the admin panel. No more work from scratch. Work with pre maid admin panel. Easy to customize, add, remove features.
 
 ## Features
 - Build with popular and latest technologys (`ReactJs, React-router-dom, TailwindCss3`).
